@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Challenge_2_ilyasa_adam_naufal"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
