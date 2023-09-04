@@ -5,14 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:background="#a06cd5"
     tools:context=".MainActivity">
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#a06cd5"
-        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
@@ -23,39 +21,64 @@
             android:text="Home Pemesanan Makanan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="761dp"
-        android:layout_marginTop="28dp"
-        android:background="#f8f1ff"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="750dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="28dp"
+            android:background="#f8f1ff"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textgreeting"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hi, User"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="137dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textoffer"
+                <TextView
+                    android:id="@+id/textgreeting"
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, User"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textoffer"
+                    android:layout_width="216dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mau makan apa hari ini?"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="36dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    tools:src="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    tools:src="@tools:sample/avatars" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mau makan apa hari ini?"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="711dp"
+                android:layout_gravity="bottom" />
 
         </LinearLayout>
 
