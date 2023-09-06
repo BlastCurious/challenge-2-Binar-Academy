@@ -9,80 +9,64 @@
     android:paddingBottom="8dp"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
-    android:background="#a06cd5"
+    android:background="#fffff0"
     tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:text="Home Pemesanan Makanan"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hai, User"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/offering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mau makan apa hari ini?"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+
+    <ImageButton
+        android:id="@+id/promo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="3dp">
+        android:layout_height="100dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offering"
+        tools:src="@tools:sample/backgrounds/scenic" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="28dp"
-            android:background="#f8f1ff"
-            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="137dp"
-                android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        app:layout_constraintStart_toEndOf="@id/promo"
+        app:layout_constraintTop_toTopOf="@+id/promo"/>
 
-                <TextView
-                    android:id="@+id/textgreeting"
-                    android:layout_width="213dp"
-                    android:layout_height="wrap_content"
-                    android:text="Hi, User"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textoffer"
-                    android:layout_width="216dp"
-                    android:layout_height="wrap_content"
-                    android:text="Mau makan apa hari ini?"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="36dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="right"
-                    tools:src="@tools:sample/avatars" />
-
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="right"
-                    tools:src="@tools:sample/avatars" />
-
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="711dp"
-                android:layout_gravity="bottom" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="221dp"
+        android:layout_height="65dp"
+        android:text="Diskon 30% \n
+        \n Pesan makanan dengan aplikasi dan dapatkan diskonmu"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="@id/promo"
+        app:layout_constraintTop_toTopOf="@+id/promo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
