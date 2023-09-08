@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fffff0"
+    android:background="#ffffff"
     android:orientation="vertical"
     android:paddingLeft="8dp"
     android:paddingTop="8dp"
@@ -14,11 +14,11 @@
 
     <TextView
         android:id="@+id/greeting"
+        style="@style/headingfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
-        style="@style/headingfont"
         android:text="Hai, User"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,10 +29,10 @@
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
+        android:contentDescription="CART"
         android:src="@drawable/shopping_cart"
         app:layout_constraintEnd_toStartOf="@id/account"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="CART" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/account"
@@ -40,20 +40,20 @@
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="ACCOUNT"
         android:src="@drawable/test_account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="ACCOUNT" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/offering"
+        style="@style/bodyfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/montserrat"
         android:text="Mau makan apa hari ini?"
-        style="@style/bodyfont"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
@@ -74,9 +74,9 @@
             android:id="@+id/promo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="DISCOUNT BANNER"
             android:scaleType="fitXY"
-            android:src="@drawable/foodiesfeed_com_coffee_latte_with_croissant"
-            android:contentDescription="DISCOUNT BANNER" />
+            android:src="@drawable/foodiesfeed_com_coffee_latte_with_croissant" />
 
         <ImageView
             android:id="@+id/discount"
@@ -84,187 +84,148 @@
             android:layout_height="90dp"
             android:layout_gravity="left|center"
             android:layout_marginStart="20dp"
+            android:contentDescription="DISCOUNT PICTURE"
             android:scaleType="fitXY"
             android:src="@drawable/_2751000_6688233"
-            app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="DISCOUNT PICTURE" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textdisc"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
             style="@style/headingfont"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="right|center"
             android:layout_marginEnd="30dp"
-            android:text="Diskon 30% "/>
+            android:layout_marginBottom="25dp"
+            android:text="Diskon 30% "
+            android:textColor="#ffffff" />
 
         <TextView
             android:id="@+id/textdescdisc"
+            style="@style/bodyfont"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:text="Pesan makanan dengan aplikasi dan dapatkan diskonmu" />
+            android:text="Pesan makanan dengan aplikasi dan dapatkan diskonmu"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
 
     </androidx.cardview.widget.CardView>
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+    <ImageView
+        android:id="@+id/pilihan1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="PILIHAN1"
+        android:src="@drawable/foodiesfeed_com_french_fries_with_ketchup_top_view"
+        app:layout_constraintEnd_toStartOf="@id/pilihan2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menupromo" />
+
+    <TextView
+        android:id="@+id/namapilihan1"
+        style="@style/bodyfont2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Side dish"
+        app:layout_constraintEnd_toEndOf="@id/pilihan1"
+        app:layout_constraintStart_toStartOf="@id/pilihan1"
+        app:layout_constraintTop_toBottomOf="@id/pilihan1" />
+
+    <ImageView
+        android:id="@+id/pilihan2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="PILIHAN2"
+        android:scaleType="fitXY"
+        android:src="@drawable/foodiesfeed_com_strawberry_milk_splash"
+        app:layout_constraintEnd_toStartOf="@id/namapilihan3"
+        app:layout_constraintStart_toEndOf="@id/namapilihan1"
+        app:layout_constraintTop_toBottomOf="@id/menupromo" />
+
+    <TextView
+        android:id="@+id/namapilihan2"
+        style="@style/bodyfont2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/menupromo">
+        android:text="Milk Shakes"
+        app:layout_constraintEnd_toEndOf="@id/pilihan2"
+        app:layout_constraintStart_toStartOf="@id/pilihan2"
+        app:layout_constraintTop_toBottomOf="@id/pilihan2" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/pilihan3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="PILIHAN3"
+        android:scaleType="fitXY"
+        android:src="@drawable/foodiesfeed_com_pizza_ready_for_baking"
+        app:layout_constraintEnd_toStartOf="@id/pilihan4"
+        app:layout_constraintStart_toEndOf="@id/pilihan2"
+        app:layout_constraintTop_toBottomOf="@id/menupromo" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center|fill_horizontal"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
+    <TextView
+        android:id="@+id/namapilihan3"
+        style="@style/bodyfont2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pizza"
+        app:layout_constraintEnd_toEndOf="@id/pilihan3"
+        app:layout_constraintStart_toStartOf="@id/pilihan3"
+        app:layout_constraintTop_toBottomOf="@id/pilihan3" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/pilihan4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="PILIHAN4"
+        android:scaleType="fitXY"
+        android:src="@drawable/foodiesfeed_com_coffee_latte_with_croissant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pilihan3"
+        app:layout_constraintTop_toBottomOf="@id/menupromo" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        tools:src="@tools:sample/backgrounds/scenic" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center|fill_horizontal"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        tools:src="@tools:sample/backgrounds/scenic" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center|fill_horizontal"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        tools:src="@tools:sample/backgrounds/scenic" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center|fill_horizontal"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        tools:src="@tools:sample/backgrounds/scenic" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center|fill_horizontal"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        tools:src="@tools:sample/backgrounds/scenic" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jajanan"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/namapilihan4"
+        style="@style/bodyfont2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Coffe"
+        app:layout_constraintEnd_toEndOf="@id/pilihan4"
+        app:layout_constraintStart_toStartOf="@id/pilihan4"
+        app:layout_constraintTop_toBottomOf="@id/pilihan4" />
 
     <TextView
         android:id="@+id/listmakanan"
+        style="@style/headingfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="50dp"
         android:text="List Menu Makanan"
-        style="@style/headingfont"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/pilihan1" />
 
     <ImageView
         android:id="@+id/gridlist"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="PROMO BANNER"
         android:src="@drawable/health_data"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="PROMO BANNER" />
+        app:layout_constraintTop_toBottomOf="@id/pilihan4" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/menu1"
@@ -275,6 +236,7 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@id/listmakanan">
 
         <LinearLayout
@@ -284,9 +246,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="MENU ITEM 1"
                 android:scaleType="fitXY"
-                android:src="@drawable/foodiesfeed_com_grilled_whole_chicken"
-                android:contentDescription="MENU ITEM 1" />
+                android:src="@drawable/foodiesfeed_com_grilled_whole_chicken" />
 
         </LinearLayout>
 
@@ -294,23 +256,23 @@
 
     <TextView
         android:id="@+id/namamenu1"
+        style="@style/bodyfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:text="Ayam Panggang"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menu1" />
 
     <TextView
         android:id="@+id/hargamenu1"
+        style="@style/bodyfont2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
         android:text="Rp 75.000"
-        style="@style/bodyfont2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namamenu1" />
 
@@ -318,12 +280,12 @@
         android:id="@+id/menu2"
         android:layout_width="135dp"
         android:layout_height="135dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        app:layout_constraintTop_toBottomOf="@id/listmakanan"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listmakanan">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -332,9 +294,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="MENU ITEM 2"
                 android:scaleType="fitXY"
-                android:src="@drawable/foodiesfeed_com_cheeseburger"
-                android:contentDescription="MENU ITEM 2" />
+                android:src="@drawable/foodiesfeed_com_cheeseburger" />
 
         </LinearLayout>
 
@@ -342,23 +304,23 @@
 
     <TextView
         android:id="@+id/namamenu2"
+        style="@style/bodyfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Cheese Burger"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/menu2"
         app:layout_constraintTop_toBottomOf="@id/menu2" />
 
     <TextView
         android:id="@+id/hargamenu2"
+        style="@style/bodyfont2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="Rp 45.000"
-        style="@style/bodyfont2"
-        app:layout_constraintTop_toBottomOf="@id/namamenu2"
-        app:layout_constraintStart_toStartOf="@+id/namamenu2"/>
+        app:layout_constraintStart_toStartOf="@+id/namamenu2"
+        app:layout_constraintTop_toBottomOf="@id/namamenu2" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/menu3"
@@ -378,9 +340,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="MENU ITEM 3"
                 android:scaleType="fitXY"
-                android:src="@drawable/foodiesfeed_com_salmon_sushi_maki"
-                android:contentDescription="MENU ITEM 3" />
+                android:src="@drawable/foodiesfeed_com_salmon_sushi_maki" />
 
         </LinearLayout>
 
@@ -388,23 +350,23 @@
 
     <TextView
         android:id="@+id/namamenu3"
+        style="@style/bodyfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:text="Sushi"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menu3" />
 
     <TextView
         android:id="@+id/hargamenu3"
+        style="@style/bodyfont2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
         android:text="Rp 20.000"
-        style="@style/bodyfont2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namamenu3" />
 
@@ -412,12 +374,12 @@
         android:id="@+id/menu4"
         android:layout_width="135dp"
         android:layout_height="135dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        app:layout_constraintTop_toBottomOf="@id/hargamenu2"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hargamenu2">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -426,9 +388,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="MENU ITEM"
                 android:scaleType="fitXY"
-                android:src="@drawable/foodiesfeed_com_cherry_tomatoes_spaghetti"
-                android:contentDescription="MENU ITEM" />
+                android:src="@drawable/foodiesfeed_com_cherry_tomatoes_spaghetti" />
 
         </LinearLayout>
 
@@ -436,25 +398,24 @@
 
     <TextView
         android:id="@+id/namamenu4"
+        style="@style/bodyfont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:text="Spaghetti"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/menu4"
         app:layout_constraintTop_toBottomOf="@id/menu4" />
 
     <TextView
         android:id="@+id/hargamenu4"
+        style="@style/bodyfont2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
         android:text="Rp 35.000"
-        style="@style/bodyfont2"
         app:layout_constraintStart_toStartOf="@id/menu4"
-        app:layout_constraintTop_toBottomOf="@id/namamenu4"
-        />
+        app:layout_constraintTop_toBottomOf="@id/namamenu4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
